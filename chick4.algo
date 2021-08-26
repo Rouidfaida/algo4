@@ -1,0 +1,16 @@
+ALGORITHM Insertion_sort 
+VAR
+tab : ARRAY_OF INTEGER;
+i , j, key : INTEGER;
+BEGIN
+READ(tab)
+FOR i FROM 1  TO tab.length-1 STEP 1  DO
+    key=tab[i]
+    j=i-1;
+    WHILE (j>0 and tab[j]>key) DO
+        tab[j+1]=tab[j]
+        j=j-1
+    END_WHILE
+    tab[j+1]=key
+END_FOR
+END
